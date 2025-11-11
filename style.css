@@ -1,0 +1,229 @@
+
+/* Custom Styles for CamTech Agency */
+/* Color Variables */
+:root {
+    --primary: #14B8A6; /* Bright Aqua Teal */
+    --primary-hover: #0D9488; /* Deep Teal */
+    --secondary-gradient: linear-gradient(135deg, #14B8A6, #9333EA); /* Aqua Teal to Vivid Purple */
+    --accent: #FACC15; /* Solar Gold */
+    --text-primary: #F9FAFB; /* Soft White */
+    --text-muted: #94A3B8; /* Cool Gray */
+    --background: linear-gradient(to bottom, #000000, #0F172A); /* Pure Black to Midnight Navy */
+}
+/* Apply background color */
+body {
+    background: var(--background);
+    min-height: 100vh;
+}
+
+/* Contact section specific styles */
+#contact {
+    background: linear-gradient(to bottom, #000000, #0F172A); /* Pure Black to Midnight Navy */
+}
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1f2937;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #7C3AED;
+}
+/* Service card hover effects */
+.service-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary);
+    background: var(--secondary-gradient);
+}
+
+.service-card:hover .service-icon {
+    transform: scale(1.1);
+}
+
+.service-card:hover span {
+    color: var(--primary);
+}
+
+/* Project card hover effects */
+.project-card:hover {
+    transform: translateY(-5px);
+    border: 1px solid var(--primary);
+}
+
+.project-card:hover img {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.project-card img {
+    transition: transform 0.3s ease;
+}
+/* Modal animations */
+.modal-enter {
+    animation: modalEnter 0.3s ease-out;
+}
+
+@keyframes modalEnter {
+    from {
+        opacity: 0;
+        transform: scale(0.9) translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+/* Hidden class text color */
+.hidden {
+    color: #D3D3D3;
+}
+
+.hidden:hover {
+    color: var(--primary);
+    transition: color 0.3s ease;
+}
+
+/* Hover effects for specific navigation links */
+.hidden a[href="#services"]:hover {
+    color: #9333EA;
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+}
+
+.hidden a[href="#projects"]:hover {
+    color: #FACC15;
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+}
+
+.hidden a[href="#contact"]:hover {
+    color: #EC4899;
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+}
+/* Mobile menu animations */
+.mobile-menu-enter {
+    animation: slideIn 0.3s ease-out;
+}
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* Form focus states */
+input:focus, textarea:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1);
+}
+
+/* Loading animation */
+.loading-spinner {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Gradient text */
+.gradient-text {
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Custom button hover effects */
+.btn-primary {
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px -5px rgba(139, 92, 246, 0.4);
+}
+
+/* Parallax effect for hero section */
+.hero-parallax {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Responsive typography */
+@media (max-width: 768px) {
+    .responsive-text {
+        font-size: clamp(1.5rem, 5vw, 3rem);
+    }
+}
+
+/* Navigation styling */
+nav {
+    background: var(--background);
+    border-bottom: 1px solid var(--highlight);
+}
+
+/* Footer styling */
+footer {
+    background: var(--background);
+    border-top: 1px solid var(--highlight);
+}
+
+/* Primary color accents */
+.text-primary {
+    color: var(--primary);
+}
+
+.bg-primary {
+    background-color: var(--primary);
+}
+
+.border-primary {
+    border-color: var(--primary);
+}
+
+/* Accent color for highlights */
+.text-accent {
+    color: var(--accent);
+}
+
+.bg-accent {
+    background-color: var(--accent);
+}
+
+/* Highlight color for secondary elements */
+.text-highlight {
+    color: var(--highlight);
+}
+
+.bg-highlight {
+    background-color: var(--highlight);
+}
+
+/* Background color utility */
+.bg-background {
+    background-color: var(--background);
+}
