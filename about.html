@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - LeClass French Tutoring</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="components/navbar.js"></script>
+    <script src="components/footer.js"></script>
+</head>
+<body class="bg-white dark:bg-gray-900 transition-colors duration-300">
+    <custom-navbar></custom-navbar>
+    
+    <main>
+        <!-- About Hero -->
+        <section class="about-hero">
+            <div class="about-hero-content">
+                <h1>Our Story</h1>
+                <p>Discover the passion behind LeClass and our mission to make French learning accessible and enjoyable</p>
+            </div>
+        </section>
+
+        <!-- Mission Section -->
+        <section class="mission-section">
+            <div class="mission-content">
+                <h2>Our Mission</h2>
+                <p>At LeClass, we believe language learning should be engaging, practical, and tailored to individual needs. Our mission is to break down barriers to French fluency through personalized instruction and cultural immersion.</p>
+            </div>
+            <div class="mission-image">
+                <img src="http://static.photos/education/1200x630/42" alt="French learning">
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section class="team-section">
+            <h2>Meet Our Team</h2>
+            <p>Native French speakers with certified teaching qualifications</p>
+            
+            <div class="team-grid">
+                <div class="team-card">
+                    <img src="http://static.photos/people/400x400/1" alt="Sophie Martin">
+                    <h3>Sophie Martin</h3>
+                    <p class="team-title">Founder & Lead Instructor</p>
+                    <p>10+ years teaching experience, DELF examiner</p>
+                </div>
+                
+                <div class="team-card">
+                    <img src="http://static.photos/people/400x400/2" alt="Pierre Dubois">
+                    <h3>Pierre Dubois</h3>
+                    <p class="team-title">Senior Instructor</p>
+                    <p>Specializes in business French and conversation</p>
+                </div>
+                
+                <div class="team-card">
+                    <img src="http://static.photos/people/400x400/3" alt="Claire Moreau">
+                    <h3>Claire Moreau</h3>
+                    <p class="team-title">Junior Instructor</p>
+                    <p>Focuses on beginner students and children</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Values Section -->
+        <section class="values-section">
+            <h2>Our Core Values</h2>
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon"><i data-feather="heart"></i></div>
+                    <h3>Passion</h3>
+                    <p>We teach with enthusiasm and love for the French language</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon"><i data-feather="award"></i></div>
+                    <h3>Excellence</h3>
+                    <p>We maintain the highest standards in teaching quality</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon"><i data-feather="users"></i></div>
+                    <h3>Community</h3>
+                    <p>We foster connections between students and French culture</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <custom-footer></custom-footer>
+    <script>
+        feather.replace();
+    </script>
+</body>
+</html>

@@ -3,616 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CamTech - Digital Solutions Agency</title>
-    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <title>LeClass - Premium French Tutoring</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-    <script src="https://unpkg.com/feather-icons"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-<script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#8B5CF6',
-                        secondary: '#EC4899'
-                    }
-                }
-            }
-        }
-    </script>
+    <script src="components/navbar.js"></script>
+    <script src="components/footer.js"></script>
 </head>
-<body class="bg-black">
-    <!-- Navigation -->
-    <nav class="fixed w-full bg-black border-b border-D1D5DB z-50">
-        <div class="container mx-auto px-6 py-4">
-            <div class="flex justify-between items-center">
-                <div class="flex items-center">
-                    <h1 class="text-2xl font-bold text-white">CamTech</h1>
+<body class="bg-white dark:bg-gray-900 transition-colors duration-300">
+    <custom-navbar></custom-navbar>
+    
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <video class="hero-video" autoplay muted loop>
+                <source src="https://assets.mixkit.co/videos/preview/mixkit-woman-studying-french-with-books-12206-large.mp4" type="video/mp4">
+            </video>
+<div class="hero-content">
+<h1>Master French with <span class="gradient-text">Confidence</span></h1>
+                <p>Learn the Language of Opportunity with professional 1-on-1 & group classes, tailored to all levels from beginner to advanced.</p>
+                <div class="cta-buttons">
+                    <a href="/book" class="primary-button">Book a Session</a>
+                    <a href="/waitlist" class="secondary-button">Join Waiting List</a>
                 </div>
-                
-                <div class="hidden md:flex space-x-8">
-                    <a href="#hero" class="text-D1D5DB hover:text-8B5CF6 transition-colors">Home</a>
-                    <a href="#services" class="text-D1D5DB hover:text-8B5CF6 transition-colors">Services</a>
-                    <a href="#projects" class="text-D1D5DB hover:text-8B5CF6 transition-colors">Projects</a>
-                    <a href="#contact" class="text-D1D5DB hover:text-8B5CF6 transition-colors">Contact</a>
-</div>
+            </div>
+        </section>
 
-                <button class="md:hidden text-D1D5DB" id="mobile-menu-button">
-                    <i data-feather="menu"></i>
-                </button>
-            </div>
-        </div>
-    </nav>
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="fixed inset-0 bg-black z-40 hidden">
-        <div class="flex flex-col items-center justify-center h-full space-y-8">
-            <a href="#hero" class="text-2xl font-semibold text-D1D5DB hover:text-8B5CF6">Home</a>
-            <a href="#services" class="text-2xl font-semibold text-D1D5DB hover:text-8B5CF6">Services</a>
-            <a href="#projects" class="text-2xl font-semibold text-D1D5DB hover:text-8B5CF6">Projects</a>
-            <a href="#contact" class="text-2xl font-semibold text-D1D5DB hover:text-8B5CF6">Contact</a>
-<button class="absolute top-6 right-6 text-D1D5DB" id="close-mobile-menu">
-                <i data-feather="x"></i>
-            </button>
-        </div>
-    </div>
-    <!-- Hero Section -->
-    <section id="hero" class="pt-24 pb-20 bg-gradient-to-br from-black to-[#0F172A] text-white relative overflow-hidden">
-<div class="absolute inset-0 bg-black bg-opacity-20"></div>
-<div class="container mx-auto px-6 text-center relative z-10">
-            <div data-aos="fade-up" data-aos-duration="1000">
-                <h1 class="text-5xl md:text-7xl font-bold mb-6 animate-pulse">
-                Digital Excellence <br><span class="gradient-text">Redefined</span>
-            </h1>
-<p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
-                We craft stunning digital experiences that drive results and elevate your brand
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="#contact">
-            <button class="bg-[#14B8A6] text-white px-8 py-4 rounded-lg font-semibold hover:bg-[#0D9488] transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl" id="get-started-btn">
-<i class="fas fa-rocket mr-2"></i>
-                    Get Started
-                </button>
-               
-</div>
-        </div>
-        
-        <!-- Floating Icons -->
-        <div class="absolute top-10 left-10 animate-float">
-            <i class="fas fa-code text-white text-2xl opacity-30"></i>
-        </div>
-        <div class="absolute top-20 right-20 animate-bounce-slow">
-            <i class="fas fa-mobile-alt text-white text-3xl opacity-40"></i>
-        </div>
-        <div class="absolute bottom-20 left-20 animate-pulse-slow">
-            <i class="fas fa-paint-brush text-white text-2xl opacity-30"></i>
-        </div>
-        <div class="absolute bottom-10 right-10 animate-wiggle">
-            <i class="fas fa-chart-line text-white text-2xl opacity-40"></i>
-        </div>
-    </section>
-<!-- Services Section -->
-    <section id="services" class="py-20 bg-black">
-        <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center text-white mb-4">Our Services</h2>
-            <p class="text-xl text-D1D5DB text-center mb-16 max-w-2xl mx-auto">
-                Comprehensive digital solutions tailored to your business needs
-            </p>
+        <!-- Features Section -->
+        <section class="features-section">
+            <h2>Why Choose LeClass?</h2>
+            <p>Experience premium French tutoring that combines expertise with personalized attention</p>
             
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Service 1 -->
-                <div class="bg-gray-900 rounded-xl p-8 hover:shadow-lg transition-all cursor-pointer service-card" data-service="web-development">
-                <div class="w-16 h-16 bg-gradient-to-r from-[#14B8A6] to-[#9333EA] rounded-lg flex items-center justify-center mb-6">
-<i data-feather="code" class="text-white"></i>
-                    </div>
-                    <h3 class="text-2xl font-semibold text-white mb-4">Web Development</h3>
-                    <p class="text-[#94A3B8] mb-4">
-                        Custom websites and web applications built with cutting-edge technologies
-                    </p>
-                    <span class="text-[#14B8A6] font-semibold learn-more-span cursor-pointer">Learn more →</span>
-</div>
-                <!-- Service 2 -->
-                <div class="bg-gray-900 rounded-xl p-8 hover:shadow-lg transition-all cursor-pointer service-card" data-service="ui-ux-design">
-                <div class="w-16 h-16 bg-gradient-to-r from-[#14B8A6] to-[#9333EA] rounded-lg flex items-center justify-center mb-6">
-                        <i data-feather="layout" class="text-white"></i>
-                    </div>
-                    <h3 class="text-2xl font-semibold text-white mb-4">UI/UX Design</h3>
-                    <p class="text-[#94A3B8] mb-4">
-                            Intuitive and beautiful designs that enhance user experience
-                        </p>
-                        <span class="text-[#14B8A6] font-semibold learn-more-span cursor-pointer">Learn more →</span>
-</div>
-                <!-- Service 3 -->
-                <div class="bg-gray-900 rounded-xl p-8 hover:shadow-lg transition-all cursor-pointer service-card" data-service="digital-marketing">
-                <div class="w-16 h-16 bg-gradient-to-r from-[#14B8A6] to-[#9333EA] rounded-lg flex items-center justify-center mb-6">
-                        <i data-feather="trending-up" class="text-white"></i>
-                    </div>
-                    <h3 class="text-2xl font-semibold text-white mb-4">Digital Marketing</h3>
-                    <p class="text-[#94A3B8] mb-4">
-                            Strategic marketing campaigns that drive growth and engagement
-                        </p>
-                        <span class="text-[#14B8A6] font-semibold learn-more-span cursor-pointer">Learn more →</span>
-</div>
-</div>
-        </div>
-    </section>
-    <!-- Projects Section -->
-    <section id="projects" class="py-20 bg-black">
-        <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center text-white mb-4" data-aos="fade-up">Our Projects</h2>
-            <p class="text-xl text-D1D5DB text-center mb-16 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="200">See how we've helped businesses transform their digital presence</p>
-            
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Project 1 -->
-                <div class="bg-gray-900 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer project-card transform hover:-translate-y-2" data-project="apple-home" data-aos="flip-left" data-aos-delay="300">
-                    <div class="overflow-hidden">
-                        <img src="http://static.photos/technology/640x360/1" alt="Apple Home" class="w-full h-48 object-cover transition-transform duration-700 hover:scale-110" data-aos="zoom-in">
-                    </div>
-                    <div class="p-6">
-                        <div class="flex items-center mb-3">
-                        <i class="fab fa-apple text-[#14B8A6] mr-2"></i>
-<h3 class="text-xl font-semibold text-white">Apple Home</h3>
-                        </div>
-                        <p class="text-[#94A3B8] mb-4">
-                            Your Ultimate apple store in CMR
-                        </p>
-                        <span class="text-[#14B8A6] font-semibold flex items-center group">
-View Details 
-                                <i class="fas fa-external-link-alt ml-2 transform group-hover:scale-110 transition-transform duration-300">
-                            </i>
-                        </span>
-</div>
-                </div>
-                <!-- Project 2 -->
-                <div class="bg-gray-900 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer project-card transform hover:-translate-y-2" data-project="drip-lux" data-aos="flip-left" data-aos-delay="400">
-                    <div class="overflow-hidden">
-                        <img src="http://static.photos/minimal/640x360/2" alt="Drip Lux" class="w-full h-48 object-cover transition-transform duration-700 hover:scale-110" data-aos="zoom-in">
-                    </div>
-                    <div class="p-6">
-                        <div class="flex items-center mb-3">
-                        <i class="fas fa-gem text-[#14B8A6] mr-2"></i>
-<h3 class="text-xl font-semibold text-white">Drip Lux</h3>
-                        </div>
-                        <p class="text-[#94A3B8] mb-4">
-                            Drip official, Your Ultimate Fashion Store and Luxury Supplier In CMR
-                        </p>
-                        <span class="text-[#14B8A6] font-semibold flex items-center group">
-                                View Details 
-                                <i class="fas fa-external-link-alt ml-2 transform group-hover:scale-110 transition-transform duration-300">
-                                </i>
-                            </span>
-</div>
-                    </div>
-                <!-- Project 3 -->
-                <div class="bg-gray-900 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer project-card transform hover:-translate-y-2" data-project="tracking-agency" data-aos="flip-left" data-aos-delay="500">
-                    <div class="overflow-hidden">
-                        <img src="http://static.photos/workspace/640x360/3" alt="Tracking Agency" class="w-full h-48 object-cover transition-transform duration-700 hover:scale-110" data-aos="zoom-in">
-                    </div>
-                    <div class="p-6">
-                        <div class="flex items-center mb-3">
-                        <i class="fas fa-search-location text-[#14B8A6] mr-2"></i>
-<h3 class="text-xl font-semibold text-white">Tracking Agency</h3>
-                        </div>
-                        <p class="text-[#94A3B8] mb-4">
-                            Advanced tracking and analytics platform for digital marketing
-                        </p>
-                        <span class="text-[#14B8A6] font-semibold flex items-center group">
-                                View Details 
-                                <i class="fas fa-external-link-alt ml-2 transform group-hover:scale-110 transition-transform duration-300">
-                            </i>
-                        </span>
-</div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon"><i data-feather="user-check"></i></div>
+                    <h3>Expert Tutors</h3>
+                    <p>Native French speakers with certified teaching qualifications and years of experience.</p>
                 </div>
                 
-                <!-- Project 4 - Real Estate -->
-                <div class="bg-gray-900 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer project-card transform hover:-translate-y-2" data-project="premium-estates" data-aos="flip-left" data-aos-delay="600">
-                    <div class="overflow-hidden">
-                        <img src="http://static.photos/estate/640x360/4" alt="Premium Estates" class="w-full h-48 object-cover transition-transform duration-700 hover:scale-110" data-aos="zoom-in">
-                    </div>
-                    <div class="p-6">
-                        <div class="flex items-center mb-3">
-                        <i class="fas fa-home text-[#14B8A6] mr-2"></i>
-<h3 class="text-xl font-semibold text-white">Hans Rentals</h3>
-                        </div>
-                        <p class="text-[#94A3B8] mb-4">
-                            We provide easy find accomodations in any area in CMR
-                        </p>
-                        <span class="text-[#14B8A6] font-semibold flex items-center group">
-                                View Details 
-                                <i class="fas fa-external-link-alt ml-2 transform group-hover:scale-110 transition-transform duration-300">
-                            </i>
-                        </span>
-</div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i data-feather="trending-up"></i></div>
+                    <h3>Personalized Learning</h3>
+                    <p>Customized lesson plans tailored to your goals, level, and learning style.</p>
                 </div>
                 
-                <!-- Project 5 - Restaurant -->
-                <div class="bg-gray-900 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer project-card transform hover:-translate-y-2" data-project="savory-bites" data-aos="flip-left" data-aos-delay="700">
-                    <div class="overflow-hidden">
-                        <img src="http://static.photos/restaurant/640x360/5" alt="Savory Bites" class="w-full h-48 object-cover transition-transform duration-700 hover:scale-110" data-aos="zoom-in">
-                    </div>
-                    <div class="p-6">
-                        <div class="flex items-center mb-3">
-                        <i class="fas fa-utensils text-[#14B8A6] mr-2"></i>
-<h3 class="text-xl font-semibold text-white">Savory Bites</h3>
-                        </div>
-                        <p class="text-[#94A3B8] mb-4">
-                            Modern restaurant management system with online ordering and table reservation
-                        </p>
-                        <span class="text-[#14B8A6] font-semibold flex items-center group">
-                                View Details 
-                                <i class="fas fa-external-link-alt ml-2 transform group-hover:scale-110 transition-transform duration-300">
-                            </i>
-                        </span>
-</div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i data-feather="globe"></i></div>
+                    <h3>Cultural Immersion</h3>
+                    <p>Learn not just the language, but also French culture, customs, and etiquette.</p>
                 </div>
                 
-                <!-- Project 6 - Adoption -->
-                <div class="bg-gray-900 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer project-card transform hover:-translate-y-2" data-project="paws-home" data-aos="flip-left" data-aos-delay="800">
-                    <div class="overflow-hidden">
-                        <img src="http://static.photos/animals/640x360/6" alt="Paws Home" class="w-full h-48 object-cover transition-transform duration-700 hover:scale-110" data-aos="zoom-in">
-                    </div>
-                    <div class="p-6">
-                        <div class="flex items-center mb-3">
-                        <i class="fas fa-paw text-[#14B8A6] mr-2"></i>
-<h3 class="text-xl font-semibold text-white">Paws Home</h3>
-                        </div>
-                        <p class="text-[#94A3B8] mb-4">
-                            Animal adoption platform connecting shelters with potential pet owners
-                        </p>
-                        <span class="text-[#14B8A6] font-semibold flex items-center group">
-                                View Details 
-                                <i class="fas fa-external-link-alt ml-2 transform group-hover:scale-110 transition-transform duration-300">
-                            </i>
-                        </span>
-</div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i data-feather="message-square"></i></div>
+                    <h3>Conversation Focus</h3>
+                    <p>Build confidence through real conversations and practical language use.</p>
                 </div>
 </div>
-        </div>
-    </section>
-<!-- Contact Section -->
-    <section id="contact" class="py-20 bg-white">
-        <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center text-gray-800 mb-4" data-aos="fade-up">Get In Touch</h2>
-            <p class="text-xl text-gray-600 text-center mb-16 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="200">Ready to start your next project? Let's talk!</p>
-            
-            <div class="max-w-4xl mx-auto bg-gray-50 rounded-2xl p-8 shadow-lg" data-aos="zoom-in" data-aos-delay="300">
-                <form class="space-y-6">
-                    <div class="grid md:grid-cols-2 gap-6">
-                        <div data-aos="fade-right" data-aos-delay="400">
-                        <label for="name" class="block text-sm font-medium text-gray-700 mb-2">
-                                <i class="fas fa-user mr-2 text-blue-500"></i>
-Name
-                            </label>
-                            <input type="text" id="name" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 transform focus:scale-105">
-                        </div>
-                        <div data-aos="fade-left" data-aos-delay="500">
-                        <label for="email" class="block text-sm font-medium text-gray-700 mb-2">
-                                <i class="fas fa-envelope mr-2 text-blue-500"></i>
-Email
-                            </label>
-                            <input type="email" id="email" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 transform focus:scale-105">
-                        </div>
-                    </div>
-                    <div data-aos="fade-up" data-aos-delay="600">
-                        <label for="subject" class="block text-sm font-medium text-gray-700 mb-2">
-                                <i class="fas fa-tag mr-2 text-blue-500"></i>
-Subject
-                    </label>
-                    <input type="text" id="subject" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 transform focus:scale-105">
-                    </div>
-                    <div data-aos="fade-up" data-aos-delay="700">
-                        <label for="message" class="block text-sm font-medium text-gray-700 mb-2">
-                                <i class="fas fa-comment mr-2 text-blue-500"></i>
-Message
-                    </label>
-                    <textarea id="message" rows="6" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 transform focus:scale-105"></textarea>
-                    </div>
-                    <button type="submit" class="w-full bg-[#14B8A6] text-white py-4 rounded-lg font-semibold hover:bg-[#0D9488] transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl" data-aos="tada" data-aos-delay="800">
-<i class="fas fa-paper-plane mr-2"></i>
-                            Send Message
-                    </button>
-</form>
-            </div>
-        </div>
-    </section>
-    <!-- icons--!>
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Social Media Links</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#14B8A6',
-                        'primary-hover': '#0D9488',
-                        accent: '#FACC15',
-                        'text-main': '#F9FAFB',
-                        'text-muted': '#94A3B8',
-                    },
-                    backgroundImage: {
-                        'social-gradient': 'linear-gradient(135deg, #14B8A6 0%, #9333EA 100%)',
-                        'section-gradient': 'linear-gradient(135deg, #000000 0%, #0F172A 100%)',
-                    }
-                }
-            }
-        }
-    </script>
-    <style type="text/tailwindcss">
-        @layer utilities {
-            .animate-float {
-                animation: float 3s ease-in-out infinite;
-            }
-            @keyframes float {
-                0%, 100% { transform: translateY(0); }
-                50% { transform: translateY(-5px); }
-            }
-        }
-    </style>
-</head>
-<body class="bg-black min-h-screen flex items-center justify-center p-4">
-    <div class="w-full max-w-6xl">
-        <!-- Main container with proper alignment -->
-        <div class="flex flex-col lg:flex-row gap-6 md:gap-8 items-stretch">
-            
-            <!-- Connect With Us Section -->
-            <section class="bg-section-gradient rounded-2xl p-6 md:p-8 flex-1 shadow-2xl flex flex-col justify-center">
-                <div class="text-center mb-6">
-                    <h2 class="text-text-main text-2xl md:text-3xl font-bold mb-2">Connect With Us</h2>
-                    <p class="text-text-muted text-sm md:text-base max-w-md mx-auto">
-                        Follow us for the latest updates and exclusive content.
-                    </p>
-                </div>
-                
-                <div class="flex justify-center gap-4 md:gap-6 mb-6" id="socialIcons">
-                    <!-- Social media icons will be generated by JavaScript -->
-                </div>
-                
-                <div class="text-center mt-2">
-                    <button 
-                        id="ctaButton" 
-                        class="bg-accent text-black font-semibold py-2 px-6 rounded-full text-sm shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
-                    >
-                        Follow Us
-                    </button>
-                </div>
-            </section>
+        </section>
 
-            <!-- Latest Updates Section -->
-            <section class="bg-section-gradient rounded-2xl p-6 md:p-8 flex-1 shadow-2xl">
-                <h2 class="text-text-main text-2xl md:text-3xl font-bold text-center mb-6">Latest Updates</h2>
-                <div class="space-y-4" id="updatesContainer">
-                    <!-- Update 1 -->
-                    <a href="#" class="block bg-black/30 rounded-lg p-4 border-l-4 border-primary hover:bg-black/40 transition-all duration-300 group transform hover:translate-x-1">
-                        <h3 class="text-text-main font-semibold group-hover:text-accent transition-colors text-sm md:text-base">New Product Launch</h3>
-                        <p class="text-text-muted text-xs md:text-sm mt-1">Check out our latest innovation coming next month.</p>
-                    </a>
-                    
-                    <!-- Update 2 -->
-                    <a href="#" class="block bg-black/30 rounded-lg p-4 border-l-4 border-accent hover:bg-black/40 transition-all duration-300 group transform hover:translate-x-1">
-                        <h3 class="text-text-main font-semibold group-hover:text-accent transition-colors text-sm md:text-base">Exclusive Offer</h3>
-                        <p class="text-text-muted text-xs md:text-sm mt-1">Special discount for our social media followers.</p>
-                    </a>
-                    
-                    <!-- Update 3 -->
-                    <a href="#" class="block bg-black/30 rounded-lg p-4 border-l-4 border-social-gradient hover:bg-black/40 transition-all duration-300 group transform hover:translate-x-1">
-                        <h3 class="text-text-main font-semibold group-hover:text-accent transition-colors text-sm md:text-base">Community Event</h3>
-                        <p class="text-text-muted text-xs md:text-sm mt-1">Join our online meetup this weekend.</p>
-                    </a>
-                </div>
-            </section>
-        </div>
-    </div>
+        <!-- CTA Section -->
+        <section class="cta-section animate-on-scroll">
+<h2>Ready to Master French?</h2>
+            <p>Join LeClass today and start your journey to French fluency with expert guidance and personalized attention.</p>
+            <div class="cta-buttons">
+                <a href="/book" class="primary-button">Book Your First Session</a>
+                <a href="/waitlist" class="secondary-button">Join Waiting List</a>
+            </div>
+        </section>
+    </main>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Social media data for the four requested platforms
-            const socialPlatforms = [
-                { 
-                    name: 'TikTok', 
-                    icon: 'fab fa-tiktok', 
-                    url: '#',
-                    color: 'bg-social-gradient'
-                },
-                { 
-                    name: 'Facebook', 
-                    icon: 'fab fa-facebook-f', 
-                    url: '#',
-                    color: 'bg-primary'
-                },
-                { 
-                    name: 'Instagram', 
-                    icon: 'fab fa-instagram', 
-                    url: '#',
-                    color: 'bg-social-gradient'
-                },
-                { 
-                    name: 'X', 
-                    icon: 'fab fa-x-twitter', 
-                    url: '#',
-                    color: 'bg-primary'
-                }
-            ];
-            
-            const socialIconsContainer = document.getElementById('socialIcons');
-            
-            // Generate social media icons
-            socialPlatforms.forEach((platform, index) => {
-                const socialLink = document.createElement('a');
-                socialLink.href = platform.url;
-                socialLink.target = "_blank";
-                socialLink.className = 'group flex flex-col items-center transition-all duration-300 hover:-translate-y-1 w-14 md:w-16';
-                socialLink.innerHTML = `
-                    <div class="w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center mb-2 
-                        ${platform.color} 
-                        group-hover:bg-primary-hover shadow-md group-hover:shadow-lg transition-all duration-300">
-                        <i class="${platform.icon} text-black text-base md:text-lg"></i>
-                    </div>
-                    <span class="text-text-main text-xs group-hover:text-accent transition-colors duration-300">
-                        ${platform.name}
-                    </span>
-                `;
-                
-                socialIconsContainer.appendChild(socialLink);
-            });
-            
-            // Add animation to icons
-            const socialLinks = document.querySelectorAll('#socialIcons a');
-            socialLinks.forEach((link, index) => {
-                link.classList.add('animate-float');
-                link.style.animationDelay = `${index * 0.2}s`;
-            });
-            
-            // CTA button interaction
-            const ctaButton = document.getElementById('ctaButton');
-            ctaButton.addEventListener('click', function() {
-                // Create a ripple effect
-                const ripple = document.createElement('span');
-                const rect = this.getBoundingClientRect();
-                const size = Math.max(rect.width, rect.height);
-                const x = event.clientX - rect.left - size/2;
-                const y = event.clientY - rect.top - size/2;
-                
-                ripple.style.cssText = `
-                    position: absolute;
-                    border-radius: 50%;
-                    background: rgba(255, 255, 255, 0.5);
-                    transform: scale(0);
-                    animation: ripple 600ms linear;
-                    top: ${y}px;
-                    left: ${x}px;
-                    width: ${size}px;
-                    height: ${size}px;
-                `;
-                
-                this.appendChild(ripple);
-                
-                // Remove ripple after animation
-                setTimeout(() => {
-                    ripple.remove();
-                }, 600);
-                
-                // Show a confirmation message
-                const originalText = this.textContent;
-                this.textContent = 'Thank you!';
-                this.disabled = true;
-                
-                setTimeout(() => {
-                    this.textContent = originalText;
-                    this.disabled = false;
-                }, 2000);
-            });
-            
-            // Add ripple animation style
-            const style = document.createElement('style');
-            style.textContent = `
-                @keyframes ripple {
-                    to {
-                        transform: scale(4);
-                        opacity: 0;
-                    }
-                }
-                
-                /* Ensure equal height on desktop */
-                @media (min-width: 1024px) {
-                    .flex-1 {
-                        min-height: 400px;
-                    }
-                }
-            `;
-            document.head.appendChild(style);
-        });
-    </script>
-</body>
-</html>
-<!-- Footer -->
-    <footer class="bg-gray-800 text-white py-12">
-        <div class="container mx-auto px-6">
-            <div class="grid md:grid-cols-4 gap-8">
-                <div>
-                    <h3 class="text-xl font-bold mb-4">CamTech</h3>
-                    <p class="text-[#94A3B8]">
-                        Crafting exceptional digital experiences that drive business growth and success.
-                    </p>
-</div>
-                
-                <div>
-                    <h4 class="font-semibold mb-4">Quick Links</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#hero" class="text-[#94A3B8] hover:text-white transition-colors">Home</a></li>
-                        <li><a href="#services" class="text-[#94A3B8] hover:text-white transition-colors">Services</a></li>
-                        <li><a href="#projects" class="text-[#94A3B8] hover:text-white transition-colors">Projects</a></li>
-                        <li><a href="#contact" class="text-[#94A3B8] hover:text-white transition-colors">Contact</a></li>
-                    </ul>
-</div>
-                
-                <div>
-                    <h4 class="font-semibold mb-4">Services</h4>
-                    <ul class="space-y-2">
-                       
-                        <li><a href="#" class="text-[#94A3B8] hover:text-white transition-colors">Web Development</a></li>
-                        <li><a href="#" class="text-[#94A3B8] hover:text-white transition-colors">UI/UX Design</a></li>
-                        <li><a href="#" class="text-[#94A3B8] hover:text-white transition-colors">Digital Marketing</a></li>
-                    </ul>
-</div>
-                
-                <div>
-                    <h4 class="font-semibold mb-4">Contact Info</h4>
-                    <ul class="space-y-2 text-[#94A3B8]">
-                        <li class="flex items-center">
-                            <i data-feather="mail" class="w-4 h-4 mr-2"></i>
-                            hello@camtech.com
-                        </li>
-                        <li class="flex items-center">
-                            <i data-feather="phone" class="w-4 h-4 mr-2"></i>
-                            +237 (678) 940 473
-                        </li>
-                        <li class="flex items-center">
-                            <i data-feather="map-pin" class="w-4 h-4 mr-2"></i>
-                            Bamenda, CMR
-                        </li>
-                    </ul>
-</div>
-            </div>
-            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-[#94A3B8]">
-                <p>&copy; 2025 CamTech. All rights reserved.</p>
-            </div>
-</div>
-    </footer>
-
-    <!-- Modal Overlay -->
-    <div id="modal-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden">
-        <div class="flex items-center justify-center min-h-screen p-4">
-            <div class="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
-                <div class="p-6">
-                    <button id="close-modal" class="float-right text-gray-500 hover:text-gray-700">
-                        <i data-feather="x"></i>
-                    </button>
-                    <div id="modal-content" class="clear-both">
-                        <!-- Modal content will be inserted here -->
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="script.js"></script>
+    <custom-footer></custom-footer>
     <script>
         feather.replace();
-        // Initialize AOS animations
-        AOS.init({
-            duration: 1000,
-            once: true,
-            offset: 100
-        });
     </script>
-<script src=""></script>
 </body>
 </html>
