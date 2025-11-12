@@ -1,7 +1,7 @@
 ---
-title: CamTech Digital Solutions Agency 🚀
-colorFrom: gray
-colorTo: blue
+title: LeClass - French Tutoring Excellence 🎓
+colorFrom: pink
+colorTo: yellow
 emoji: 🐳
 sdk: static
 pinned: false
